@@ -1,20 +1,17 @@
-package main
+const express = require("express");
+const app = express();
 
-import (
-	"html/template"
-	"net/http"
-)
+// Home route
+app.get("/", (req, res) => {
+    res.send("<h1>Welcome to my Node.js site 🚀</h1><p>Using Express!</p>");
+});
 
-// Load template once
-var tmpl = template.Must(template.ParseFiles("index.html"))
+// About route
+app.get("/about", (req, res) => {
+    res.send("<h1>About Page</h1><p>This is Express backend.</p>");
+});
 
-func home(w http.ResponseWriter, r *http.Request) {
-	tmpl.Execute(w, nil)
-}
-
-func main() {
-	http.HandleFunc("/", home)
-
-	println("Server running at http://localhost:8080")
-	http.ListenAndServe(":4000", nil)
-}
+// Start server
+app.listen(4000, () => {
+    console.log("Server running at http://localhost:3000");
+});
