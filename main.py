@@ -4,11 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "<h1>Welcome to my Python website 🚀</h1>"
-
-@app.route("/about")
-def about():
-    return "<h2>About Page</h2><p>This is a simple Flask app.</p>"
+    return "<h1>My VPS site is live 🚀</h1>"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=4000)
