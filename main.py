@@ -7,4 +7,4 @@ def home():
     return "<h1>My VPS site is live 🚀</h1>"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=4000)
+    app.run(host="0.0.0.0", port=4003)
