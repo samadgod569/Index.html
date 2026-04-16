@@ -1,0 +1,24 @@
+name: Deploy to Arachnoid
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: |
+          curl -X POST https://arachnoid.vortexa.cloud/api/deploy \
+            -H "Content-Type: application/json" \
+            -d '{
+              "username": "c69p2w",
+              "password": "Samadgod169",
+              "appName": "app1",
+              "appPassword": "samad",
+              "repo": "https://github.com/samadgod569/Index.html.git",
+              "language": "py",
+              "startFile": "main.py",
+              "packages": ["flask"]
+            }'
