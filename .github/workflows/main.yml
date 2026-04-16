@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Deploy
         run: |
-          curl -X POST https://arachnoid.vortexa.cloud/api/deploy \
+          curl -X POST https://cloudra.vortexa.cloud/api/deploy \
             -H "Content-Type: application/json" \
             -d '{
               "username": "c69p2w",
