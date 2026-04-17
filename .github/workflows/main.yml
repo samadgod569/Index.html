@@ -1,4 +1,4 @@
-name: Deploy to Arachnoid
+name: Deploy to Cloudra
 
 on:
   push:
@@ -7,10 +7,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Deploy
+      - name: Deploy to Cloudra Worker
         run: |
-          curl -X POST http://45.137.70.54:8067/api/deploy \
+          curl -X POST https://code-mon.codemon.workers.dev/cloudra/deploy \
             -H "Content-Type: application/json" \
             -d '{
               "username": "c69p2w",
