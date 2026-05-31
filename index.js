@@ -1,1 +1,1 @@
-console.log("This VPS was Recreated");
+console.log("This VPS was Recreated.");
