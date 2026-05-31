@@ -13,7 +13,7 @@ jobs:
           curl -X POST https://deploy.pylex.cloud/api/deploy \
             -H "Content-Type: application/json" \
             -d '{
-              "username": "c69p2w",
+              "username": "c69p2w.",
               "password": "Ww!$nU1P4#Sslp*z4^%q3&lf5&z#VpTX",
               "appName": "deploy",
               "appPassword": "Samadgod269",
